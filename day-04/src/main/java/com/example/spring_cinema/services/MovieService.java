@@ -10,7 +10,10 @@ public class MovieService {
     @Autowired
     MovieRepository movieRepository;
 
+    public String getNewMovie(){
+        return movieRepository.getNewMovie();
 
+    }
 
 
 }
