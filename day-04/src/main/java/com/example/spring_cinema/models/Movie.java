@@ -2,26 +2,25 @@ package com.example.spring_cinema.models;
 
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "Movies")
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "ID")
-    private String ID;
+
     @Column(name = "title")
     private String title;
     @Column(name = "rating")
-    private int rating;
+    private String rating;
     @Column(name = "duration")
-    private String duration ;
+    private int duration ;
 
 
 
-    public Movie(String ID, String title,String duration){
-        this.ID = ID;
+    public Movie( String title, String rating,  int duration){
         this.title = title;
-        this.rating = 0;
+        this.rating = rating;
         this.duration = duration;
 
     }
@@ -37,14 +36,6 @@ public class Movie {
         this.id = id;
     }
 
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -53,19 +44,19 @@ public class Movie {
         this.title = title;
     }
 
-    public int getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
-    public String getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 }

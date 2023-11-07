@@ -1,9 +1,7 @@
 package com.example.spring_cinema.repositories;
 
-public class MovieRepository {
+import com.example.spring_cinema.models.Movie;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-
-    public String getNewMovie() {
-
-    }
+public interface MovieRepository extends JpaRepository<Movie, Long> {
 }
